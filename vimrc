@@ -37,6 +37,7 @@ highlight CursorColumn cterm=NONE ctermbg=black ctermfg=None guibg=NONE guifg=NO
 " - For Neovim: stdpath('data') . '/plugged'
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
+let g:plug_url_format = 'https://kgithub.com/%s.git' " or other github enhancement link
 
 " Make sure you use single quotes
 
@@ -52,9 +53,7 @@ Plug 'vim-airline/vim-airline-themes'
 
 Plug 'heavenshell/vim-pydocstring', { 'do': 'make install', 'for': 'python' }
 
-let g:plug_url_format = 'https://kgithub.com/%s.git'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-unlet g:plug_url_format
 
 Plug 'Yggdroot/indentLine'
 
@@ -65,6 +64,7 @@ Plug 'tpope/vim-surround'
 "Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build', 'branch': 'main'  }
 
 " Initialize plugin system
+unlet g:plug_url_format
 call plug#end()
 
 
