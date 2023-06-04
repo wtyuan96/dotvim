@@ -3,6 +3,7 @@ if &diff
 endif
 
 colorscheme torte
+"set termguicolors
 
 set ts=4 sw=4
 
@@ -10,7 +11,7 @@ filetype plugin indent on
 
 " =====================================================@ywt custom
 " setting====================================================
-" highlight search
+ "highlight search
 "set hlsearch
 
 " keep 3 line when scrolling
@@ -24,9 +25,9 @@ autocmd BufReadPost *
 
 " highlight current colume and line
 set cursorline
-highlight CursorLine cterm=NONE ctermbg=black ctermfg=None guibg=NONE guifg=NONE
-set cursorcolumn
-highlight CursorColumn cterm=NONE ctermbg=black ctermfg=None guibg=NONE guifg=NONE
+"highlight CursorLine cterm=NONE ctermbg=DarkGray ctermfg=None guibg=NONE guifg=NONE
+"set cursorcolumn
+"highlight CursorColumn cterm=NONE ctermbg=DarkGray ctermfg=None guibg=NONE guifg=NONE
 
 
 " =====================================================@ywt custom
@@ -60,6 +61,8 @@ Plug 'Yggdroot/indentLine'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
 
+Plug 'honza/vim-snippets'
+
 "Plug 'davidhalter/jedi-vim'
 "Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build', 'branch': 'main'  }
 
@@ -84,7 +87,7 @@ nmap <leader>- <Plug>AirlineSelectPrevTab
 nmap <leader>+ <Plug>AirlineSelectNextTab
 
 "===========================================================@ywt for pydocstring========================================================
-let g:pydocstring_doq_path = '~/.local/bin/doq'
+let g:pydocstring_doq_path = '/anaconda/bin/doq'
 
 
 "===========================================================@ywt for NERDTREE ========================================================
